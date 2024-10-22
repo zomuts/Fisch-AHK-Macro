@@ -11,7 +11,7 @@ GetRobloxHWND() {
 }
 
 toggle := false
-Control := 0.15
+Control := 0.05
 BarWidth := Floor(96 + (Control*326.67))
 
 CastRod(){
