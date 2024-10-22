@@ -11,7 +11,7 @@ GetRobloxHWND() {
 }
 
 toggle := false
-Control := 0.05
+Control := 0.15
 BarWidth := Floor(96 + (Control*326.67))
 
 CastRod(){
@@ -41,6 +41,7 @@ Shake(){
 Reel2(){
     PixelSearch, FishX, FishY, 246, 533, 569, 533, 0x434b5b, 3, FastRGB
     lastX := 246
+    global Control, BarWidth 
     if (ErrorLevel = 0){ ; Check if the fish exists
         Loop, { ; This code is very janky and will be redone in the future, just fyi
             PixelSearch, FishX, FishY, 246, 533, 569, 533, 0x434b5b, 3, FastRGB ; Checks the screen for a "fish colored" pixel, finds the blue line
@@ -48,7 +49,6 @@ Reel2(){
                 PixelSearch, BarX, BarY, 246, 533, 569, 533, 0xf1f1f1, 20, FastRGB ; Checks the screen for a white pixel (the reel bar)
                 if (ErrorLevel = 0){ ; Bar is visible, fish is within bar
                     lastX = BarX
-                    BarWidth := Floor(96 + (Control*326.67))
                     end := BarX + (BarWidth)
 
                     if (FishX > (598-BarWidth)){
