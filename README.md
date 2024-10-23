@@ -17,4 +17,6 @@ I do not plan on maintaining this for future versions of fisch so if this ever b
 9. Press Esc to stop the macro (closes the AutoHotKey program, you need to run it again if you want to restart)
 
 # Known issues:
-In some locations, the macro can randomly think it is "Reeling in" a fish when it isnt (some issue with colors, I'll fix later) <br>
+In some locations, the macro can randomly think it is "Reeling in" a fish when it isnt <br>
+- This is because the macro uses colors of pixels on screen, and certain areas can confuse the bot
+- To fix this I reccomend going in first person
