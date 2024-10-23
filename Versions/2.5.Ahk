@@ -94,7 +94,7 @@ Main:
                         }
                     } else {
                         ; Bar is not visible, get the fish in the bar
-                        if (FishX < lastPos){ 
+                        if (FishX < lastBarPos){ 
                             ; Fish is on the left of the last known pos, go left
                             tooltip("Lost Bar left")
                             if (mouseDown) {
